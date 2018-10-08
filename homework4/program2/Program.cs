@@ -11,10 +11,15 @@ namespace program2
         static void Main(string[] args)
         {
             OrderService order = new OrderService();
-            order.addorder("张三", "篮球");
-            order.addorder("赵四", "羽毛球");
-            order.addorder("王五", "排球");
-         
+            Order p1 = new Order("张三", "篮球");
+            Order p2 = new Order("李四", "网球");
+            Order p3 = new Order("王五", "足球");
+            order.addorder(p1);//添加订单
+            order.addorder(p2);
+            order.addorder(p3);
+            order.showorder();//打印
+            order.modifyorder(p1, "张三", "羽毛球");//修改
+            order.deleteorder(p2);//删除
 
         }
     }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework", "Homework\Homework.csproj", "{9560C081-BD81-41B7-97F0-F717FDA7885F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program1", "Homework\program1.csproj", "{9560C081-BD81-41B7-97F0-F717FDA7885F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program2", "program2\program2.csproj", "{D2A99C66-E23E-4B05-B404-1535C76A5790}"
 EndProject

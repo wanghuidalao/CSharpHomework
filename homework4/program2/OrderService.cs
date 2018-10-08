@@ -9,27 +9,53 @@ namespace program2
     class OrderService
     {
         List<Order> myorder = new List<Order>();
-        public void addorder(string name ,string order)
-        {
-            Order p = new Order(name, order);
-    
+        public void addorder(Order p)
+        { 
             myorder.Add(p);
         }
-
+        public void showorder()
+        {
+            foreach(Order p in myorder)
+            {
+                Console.WriteLine(p.name + ":" + p.order);
+            }
+        }
         public void deleteorder(Order order)
         {
             if(myorder.Contains(order ))
             {
-                myorder.Remove(order);
+                int n = myorder.IndexOf(order);
+                
+                Console.WriteLine(order.name + "的订单取消了，这是新订单：");
+                myorder.RemoveAt(n);
+                foreach (Order p in myorder)
+                {
+                    Console.WriteLine(p.name + ":" + p.order);
+                }
+               
+            }
+            else
+            {
+                Console.WriteLine("不存在此订单");
             }
         }
 
-        public void modify(Order order)
+        public void modifyorder(Order order,string newname,string neworder)
         {
             if(myorder.Contains(order))
             {
-                order.name = "xiaohong";
-                order.order = "hhh";               
+                int n = myorder.IndexOf(order);
+                myorder[n].name = newname;
+                myorder[n].order = neworder;
+                Console.WriteLine("修改后的订单：");
+                foreach (Order p in myorder)
+                {
+                    Console.WriteLine(p.name + ":" + p.order);
+                }
+            }
+            else
+            {
+                Console.WriteLine("不存在此订单");
             }
         }
     }
