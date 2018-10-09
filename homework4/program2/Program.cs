@@ -18,8 +18,10 @@ namespace program2
             order.addorder(p2);
             order.addorder(p3);
             order.showorder();//打印
+            order.searchorder("足球");//搜索
             order.modifyorder(p1, "张三", "羽毛球");//修改
             order.deleteorder(p2);//删除
+
 
         }
     }

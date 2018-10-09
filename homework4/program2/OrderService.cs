@@ -22,6 +22,7 @@ namespace program2
         }
         public void deleteorder(Order order)
         {
+        
             if(myorder.Contains(order ))
             {
                 int n = myorder.IndexOf(order);
@@ -56,6 +57,16 @@ namespace program2
             else
             {
                 Console.WriteLine("不存在此订单");
+            }
+        }
+        public void searchorder(string str)
+        {
+            foreach(Order p in myorder)
+            {
+                if(p.name.Equals(str)||p.order.Equals(str))
+                {
+                    Console.WriteLine("搜索结果为：" + p.name+"：" + p.order);
+                }
             }
         }
     }
