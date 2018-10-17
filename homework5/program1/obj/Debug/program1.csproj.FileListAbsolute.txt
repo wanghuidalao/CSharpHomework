@@ -1,7 +1,0 @@
-C:\Users\往生\source\repos\homework5\program1\bin\Debug\program1.exe.config
-C:\Users\往生\source\repos\homework5\program1\bin\Debug\program1.exe
-C:\Users\往生\source\repos\homework5\program1\bin\Debug\program1.pdb
-C:\Users\往生\source\repos\homework5\program1\obj\Debug\program1.csprojResolveAssemblyReference.cache
-C:\Users\往生\source\repos\homework5\program1\obj\Debug\program1.csproj.CoreCompileInputs.cache
-C:\Users\往生\source\repos\homework5\program1\obj\Debug\program1.exe
-C:\Users\往生\source\repos\homework5\program1\obj\Debug\program1.pdb
