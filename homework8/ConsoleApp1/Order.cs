@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace program2
 {
+
     public class Order
     {
+        public string ID
+        {
+            get;
+
+
+            set;
+
+        }
         public string Name
         {
             get;
@@ -18,26 +27,15 @@ namespace program2
             get;
             set;
         }
-        public int id;
-        public string ID
+ 
+     
+        public double Price
         {
             get;
 
 
             set;
             
-        }
-        public double price;
-        public double Price
-        {
-            get
-            {
-                return Price = price;
-            }
-            set
-            {
-                price = value;
-            }
         }
         public string Phone
         {

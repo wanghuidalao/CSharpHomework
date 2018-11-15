@@ -183,18 +183,44 @@ namespace program1
             
         }
         private void button5_Click(object sender, EventArgs e)
-        {             
+        {
             orderService.Export();
-            //XmlDocument doc = new XmlDocument();
-            //doc.Load(@"序列化.xml");
-            //XPathNavigator nav = doc.CreateNavigator();
-            //nav.MoveToRoot();
-            //XslCompiledTransform xt = new XslCompiledTransform();
-            //xt.Load(@"序列化.xsl");
-            //xt.Transform(nav, null);
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(@"序列化.xml");
+                XPathNavigator nav = doc.CreateNavigator();
+                nav.MoveToRoot();
+                XslCompiledTransform xt = new XslCompiledTransform();
+                xt.Load(@"..\..\序列化.xslt");
+                xt.Transform("序列化.xml", @"..\..\序列化.html");
 
+                //XmlDocument doc = new XmlDocument();
+                //doc.Load(@"序列化.xml");
+
+                //XPathNavigator nav = doc.CreateNavigator();
+                //nav.MoveToRoot();
+
+                //XslCompiledTransform xt = new XslCompiledTransform();
+                //xt.Load(@"序列化.xslt");
+
+                //FileStream outFileStream = File.OpenWrite(@"序列化.html");
+                //XmlTextWriter writer = new XmlTextWriter(outFileStream, System.Text.Encoding.UTF8);
+                //xt.Transform(nav, null, writer);
+                MessageBox.Show("已导出为.html文件");
+
+            }
+            catch (XmlException )
+            {
+                Console.WriteLine("XML Exception:" + e.ToString());
+            }
+            catch (XsltException )
+            {
+                Console.WriteLine("XSLT Exception:" + e.ToString());
+            }
         }
-      
+
+
         public bool IsTelephone(string str_telephone)
 
         {
@@ -204,7 +230,7 @@ namespace program1
         }
         public bool IsIdRight(string id)
         {
-            return Regex.IsMatch(id, @"^[2][0][1][0-9]((0[1-9])|1[1,2])((0[1-9])|([1,2][1-9])|(3[0,1]))\d{3}$");
+            return Regex.IsMatch(id, @"^[2][0][1][0-9]((0[1-9])|1[0-2])((0[1-9])|([1,2][0-9])|(3[0,1]))\d{3}$");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
